@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .errMsg {color: #D20E11; border: solid 1px #d20e11; display:none;  
+			padding: 1px 15px;	}
+            textarea {
+                resize: none;
+                width: 30%; 
+                margin: 8px 0;
+                padding: 2%;
+                font-size: 16px;
+                text-align: center;
+                display: block;
+                border-radius: 5px;
+                border: #000 2px solid;
+                font-family: Garamond;
+
+            }
+        </style>
+    </head>
+<body>
+    <script>
+        //TODO:
+        //Upload select options making sure its a comment, resume, reservations, or other
+        //Add options for date and time if it is reservation, and remove resume of its not job application
+        // style the whole page. 
+        //
+        function validPhoneNumber()
+        {
+                var enteredNumber = document.getElementsByName("phone")[0].value;
+                var phonenumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+                if(phonenumber.test(enteredNumber)){
+                    return true; 
+                }
+                return false;    
+        }
+        function validate()
+        {
+            err=false;
+            document.getElementById("errFName").style.display = "none";
+            document.getElementById("errPhone").style.display = "none";
+            document.getElementById("errLName").style.display = "none";
+            document.getElementById("errPhone").style.display = "none";
+            with (document.data)
+            {
+                if (lname.value=="")
+                {
+                    document.getElementById("errFName").style.display = "inline-block";
+                    lname.focus();
+                    err=true;
+                }
+                if (fname.value=="")
+                {
+                    document.getElementById("errLName").style.display = "inline-block";
+
+                    phone.focus();
+                    err=true;
+                }
+                if(email.value=="") //still need to check for invalud phone number
+                {
+                    document.getElementById("errMail").style.display = "inline-block";
+                    email.focus();
+                    err=true;
+                }
+                if(phone.value==""|| !validPhoneNumber())
+                {
+                    document.getElementById("errPhone").style.display = "inline-block";
+                    phone.focus();
+                    err=true;
+                }
+
+            }
+            // if(!err && hasEnoughItems()) {
+            //     order_received()
+            // }
+            return !err;
+        }
+
+    </script>
+
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form 
+    action="/action_page.php"
+    name="data"
+>
+
+<p>First Name*: <input type="text"  name='fname' /></p>
+<div id="errFName" class="errMsg" display = "none"> 
+    First Name is required</div> 
+<p>Last Name*:  <input type="text"  name='lname' /></p>
+	<div id="errLName" class="errMsg" display = "none"> 
+        Last Name is required</div> 
+<p id= "phone">Phone*: <input type="text"  name='phone'/></p>
+    <div id="errPhone" class="errMsg" display= "none"> 
+        Valid phone number is required</div>
+<p id= "email">Email*: <input type="text"  name='email'/></p>
+    <div id="errMail" class="errMsg" display= "none"> 
+        Valid email is required</div>
+<textarea placeholder="Feel free to add any additional information here"></textarea>
+  <input type="file" id="myFile" name="filename">
+  <input type = "button" value = "Submit" onclick="return validate()"/>
+</form>
+
+</body>
+</html>

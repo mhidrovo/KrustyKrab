@@ -103,6 +103,21 @@
 <p id= "email">Email*: <input type="text"  name='email'/></p>
     <div id="errMail" class="errMsg" display= "none"> 
         Valid email is required</div>
+        <form>
+            <select name="reason" id="reason">
+                <option value="donate" id ="abc">Donation</option>
+                <option value="employment">Employment</option>
+                <option value="reservation">Make a Reservation</option>
+                <option value="other">Other</option>
+            </select>
+        </form>
+
+        <script>
+            var	finalTax = document.getElementById("abc");
+            finalTax = "123445";
+        </script>
+    
+
 <textarea placeholder="Feel free to add any additional information here"></textarea>
   <input type="file" id="myFile" name="filename">
   <input type = "button" value = "Submit" onclick="return validate()"/>

@@ -26,6 +26,11 @@
         //Add options for date and time if it is reservation, and remove resume of its not job application
         // style the whole page. 
         //
+        function validateEmail(email) 
+        {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
         function validPhoneNumber()
         {
                 var enteredNumber = document.getElementsByName("phone")[0].value;
@@ -41,7 +46,7 @@
             document.getElementById("errFName").style.display = "none";
             document.getElementById("errPhone").style.display = "none";
             document.getElementById("errLName").style.display = "none";
-            document.getElementById("errPhone").style.display = "none";
+            document.getElementById("errMail").style.display = "none";
             with (document.data)
             {
                 if (lname.value=="")
@@ -57,7 +62,7 @@
                     phone.focus();
                     err=true;
                 }
-                if(email.value=="") //still need to check for invalud phone number
+                if(email.value=="" || !(validateEmail(email.value))) //still need to check for invalud phone number
                 {
                     document.getElementById("errMail").style.display = "inline-block";
                     email.focus();

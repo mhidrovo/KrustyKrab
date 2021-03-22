@@ -11,6 +11,10 @@
                 color: #D20E11; border: solid 1px #d20e11; display:none;  
                 padding: 1px 15px;
                 }
+                form p {
+                    margin: 0 40%;
+                    color: #fff;
+                }
             textarea {
                 resize: none;
                 width: 30%; 
@@ -71,16 +75,16 @@
         //Add options for date and time if it is reservation, and remove resume of its not job application
         // style the whole page. 
         //
-        $("[type=file]").on("change", function(){
-            // Name of file and placeholder
-            var file = this.files[0].name;
-            var dflt = $(this).attr("placeholder");
-            if($(this).val()!=""){
-                $(this).next().text(file);
-            } else {
-                $(this).next().text(dflt);
-            }
-        });
+        // $("[type=file]").on("change", function(){
+        //     // Name of file and placeholder
+        //     var file = this.files[0].name;
+        //     var dflt = $(this).attr("placeholder");
+        //     if($(this).val()!=""){
+        //         $(this).next().text(file);
+        //     } else {
+        //         $(this).next().text(dflt);
+        //     }
+        // });
 
 
         function validateEmail(email) 
@@ -153,7 +157,7 @@
                 else
                     {
                     // alert("Not a valid American Express credit card number!");
-                    return false;
+                        return false;
                     }
         }
         
@@ -174,25 +178,27 @@
         {
             if(choice == "donate")
             {
-                
+                document.getElementById("myFile").style.display = "none";
+                document.getElementById("card").style.display = "inline-block";
             }
             else if(choice == "employment")
             {
-
+                document.getElementById("card").style.display = "none";
+                document.getElementById("myFile").style.display = "inline-block";
             }
             else if(choice == "other")
             {
+                document.getElementById("myFile").style.display = "none";
+                document.getElementById("card").style.display = "none";
 
             }
             else if(choice == "reservation")
             {
+                document.getElementById("myFile").style.display = "none";
+                document.getElementById("card").style.display = "none";
                 //display calendar or something that checks for appropriate date. 
             }
             // alert(choice)
-        }
-        function displayDonate()
-        {
-
         }
 
     </script>
@@ -201,9 +207,14 @@
 
 <form 
     action="/action_page.php"
-    name="data"
->
-
+    name="data">
+<p>Reason for Contacting</p>
+<select name="reason" id="reason" style="justify-content: center;">
+    <option value="donate" id ="abc">Donation</option>
+    <option value="employment">Employment</option>
+    <option value="reservation">Make a Reservation</option>
+    <option value="other">Other</option>
+</select>
 <p>First Name*: <input type="text"  name='fname' /></p>
 <div id="errFName" class="errMsg" display = "none"> 
     First Name is required</div> 
@@ -219,12 +230,6 @@
 <p id= "email">Email*: <input type="text"  name='email'/></p>
     <div id="errMail" class="errMsg" display= "none"> 
         Valid email is required</div>
-        <select name="reason" id="reason">
-            <option value="donate" id ="abc">Donation</option>
-            <option value="employment">Employment</option>
-            <option value="reservation">Make a Reservation</option>
-            <option value="other">Other</option>
-        </select>
         <script>
             var	finalTax = document.getElementById("abc");
             finalTax = "123445";

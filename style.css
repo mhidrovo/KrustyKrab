@@ -1,14 +1,29 @@
 body {
     padding: 0 5%;
     margin: 0;
-    background-image: url("possiblebackground.jpg");
-    background-repeat: repeat;
-    background-size: 800px;
+    background-image: url("krabbypatt.jpg");
+    /* background-repeat: repeat; */
+	/* Size needs to be heavily updated */
+    background-size: 2000px;
+}
+
+.show_menu {
+		border: #000 3px;
+		/* position: relative; */
+		text-align: center;
+		color: white;
+}
+
+.show_menu_prompt {
+		/* position: absolute; */
+		/* top: 50%;
+		left: 50%; */
+		transform: translate(-50%, -50%);
 }
 
 .content {
     background-color: #FFF;
-    height: 6000px;
+    /* height: 6000px; */
 }
 
 .about_us {

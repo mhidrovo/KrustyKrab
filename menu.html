@@ -43,34 +43,81 @@
         return t;
       }
 
-    </script>
-      
-    <style type="text/css">
-      .menuList {
-        color: #000000;
-        font-size: 20px;
-        background: #d9e06b; 
-        padding: 1px 15px;	
-      }
+    </script>    
 
-      body {
-        background-color: #33bd4a;
-      }
+<style type="text/css">
 
-      form {
-        background-color: #e7ace2;
-        border: 3px solid #727272;
-      }
+	body {
+		padding: 0 5%;
+		margin: 0;
+		background-image: url("krabbypatt.jpg");
+		background-repeat: repeat;
+		background-size: 800px;
+	}
 
-      h2 .headers {
-        background-color: #4376b1
-      }
+	.content {
+		background-color: #FFF;
+		height: 6000px;
+	}
 
-      .errMsg {
-        color: #D20E11; border: solid 1px #d20e11; display:none;  padding: 1px 15px;
-      }
+	.about_us {
+		font-style: italic;
+		font-family: 'Merriweather Sans', sans-serif;
+		text-align: center;
+		font-size: 28px;
+	}
 
-      </style>
+
+	/* Create three equal columns that floats next to each other */
+	.column {
+		float: left;
+		width: 50%;
+		text-align: center;
+		padding: 0px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+
+	a:hover {
+		/* color: rgb(247, 4, 4); */
+		color: #faafc9;
+	}
+
+	
+	.menuList {
+	  color: #000000;
+	  font-size: 20px;
+	  background: #88ceca; 
+	  padding: 1px 15px;	
+	}
+	
+	form {
+	  background-color: #dafa9e;
+	  border: 3px solid #727272;
+	}
+
+	h2 .headers {
+	  background-color: #4a43b1
+	}
+
+	.errMsg {
+	  color: #D20E11; border: solid 1px #d20e11; display:none;  padding: 1px 15px;
+	}
+
+
+	p {
+		padding: 0.5% 0%;
+		text-align: left;
+    	margin: 5%;
+	}
+
+	</style>
 
 </head>
 
@@ -133,10 +180,10 @@
     <p>Last Name*:  <input type="text"  name='lname' /></p>
     <div id="errlname" class="errMsg">Name is required</div>
     
-    <p>Street: <input type="text"  name='street' /></p>
+    <p id="street">Street: <input type="text"  name='street' /></p>
     <div id="errstreet" class="errMsg">Street is required</div>
     
-    <p>City: <input type="text"  name='city' /></p>
+    <p id="city">City: <input type="text"  name='city' /></p>
     <div id="errcity" class="errMsg">City is required</div>
     
     <p>Phone*: <input type="text"  name='phone' /></p>
@@ -169,6 +216,7 @@
             s += "<td>$<input type='text' name='cost'/></td></tr>";
           }
           document.writeln(s);
+
       </script>
 
       <p>Subtotal: 
@@ -183,9 +231,12 @@
      <input type = "button" value = "Submit Order" onclick = "finish();"/>
      
      </form>
+
+
     <script language="javascript">
 
-  var tax = 0;
+
+  	var tax = 0;
 	var	subtotal = 0;
 	var	total = 0;
 	var	massTax = 0.1;
@@ -220,8 +271,8 @@
 
 
 	// validating street and city/pickup vs delivery
-	var street = document.getElementsByTagName("p")[2]; 
-	var	city = document.getElementsByTagName("p")[3];
+	var street = document.getElementById("street"); 
+	var	city = document.getElementById("city");
 
 
 	// make sure street and city are not displayed at the start
@@ -459,6 +510,25 @@
 		return;
 	}
 
+
+	function displayOrder() {
+		var orderWindow = window.open("", "_blank", "width = 1000, height = 1000");
+		orderWindow.document.write(statement());
+	}
+
+	// composes the statement printed when displaying order
+	function statement() {
+		getTime();
+		var orderStatement = "Thank you for ordering from Jade Delight! Your food will be ready at: " + hour + ":" + min + ".<br><br>Your order is: <br>";
+		for (let i = 0; i < quanItem.length; i++) {
+			if (quanItem[i] != 0) {
+				orderStatement += menuItems[i].name + ": " + quanItem[i] + "<br><br>";
+			}
+		}
+		orderStatement += "Here is the billing: <br>"
+		orderStatement += "Subtotal: $" + subtotal.toFixed(2) + "</br>Tax: $" + tax.toFixed(2) + "<br>Total: $" + total.toFixed(2) + "<br><br>Enjoy!";
+		return orderStatement;
+	}
 
 
     </script>

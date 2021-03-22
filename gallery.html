@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel = "stylesheet" type="text/css" href = "FooterStyle.css">
+        <!-- Insert Tristan's nav bar -->
+        <title>Krusty Krab</title>
+        <style>
+            * {box-sizing:border-box}
+
+.slideshow {
+    background-color: rgba(13, 155, 238, 0.616)
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  max-height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(253, 249, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+        </style>
+    </head>
+    <body>
+        <div id="navBar">
+            <!-- logo -->
+            <span id="logo">
+                <a href="index.html"> <img src="KrustyKrabLogo.png" height="100%"></a>
+            </span>
+    
+            <span id="pages">
+                <!-- Menu -->
+                <span class="navBox">
+                    <a href="menu.html"> Menu </a>
+                </span>
+    
+                <!-- The Team -->
+                <span class="navBox">
+                    <a href="team.html"> The Team </a>
+                </span>
+    
+                <!-- Location -->
+                <span class="navBox">
+                    <a href="location.html"> Location </a>
+                </span>
+    
+                <!-- Events / Gallery -->
+                <span class="navBox">
+                    <a href="gallery.html"> Gallery </a>
+                </span>
+    
+                <!-- Contact Us -->
+                <span class="navBox">
+                    <a href="contact.html"> Contact Us </a>
+                </span>
+    
+                <!-- FAQ -->
+                <span class="navBox">
+                    <a href="faq.html"> FAQ </a>
+                </span>
+        </div>
+        <div class="slideshow" style = "text-align: center;">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="img1.jpg" style="width: 100%">
+                <div class="text"></div>
+              </div>
+            
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="img2.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+            
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="img3.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="img4.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="img5.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="showSlides(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <script langauge = "javascript">
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) 
+                    {slideIndex = 1}
+                if (n < 1) 
+                    {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </body>
+    <body>
+        <div id="footer">
+            <div class="column left">
+                <h4>
+                    Contact Us
+                </h4>
+    
+                <div>
+                    <span>
+                        social media:
+                    </span>
+                    <span>
+                        <a href="https://www.facebook.com/TheKrustyKrabOfficial" target="blank"><img src="facebook-logo-png-2320.png" height="26px"></a>
+                    </span>
+                    <span>
+                        <a href="https://www.instagram.com/explore/tags/krustykrab/?hl=en" target="blank"><img src="instagram-logo-png-2428.png" height="26px"></a>
+                    </span>
+                    <span>
+                        <a href="https://twitter.com/krustykrabUSA" target="blank"><img src="twitter-logo-png-5860.png" height="26px"></a>
+                    </span>
+                </div>
+    
+                <h5>
+                    email: sponge.bob@krustykrab.com
+                </h5>
+    
+                <h5>
+                    address: 831 Bottom Feeder Lane, Bikini Bottom
+                </h5>
+    
+                <h5>
+                    Hours: Mon-Fri: 9am to 8pm, Sat-Sun: 10am to 11pm
+                </h5>
+            </div>
+    
+            <div class="column middle">
+                <h4>
+                    Sign up to our newsletter!
+                </h4>
+    
+                <p style="text-align: center;">
+                    we will update you on upcoming events, new menu items, and deals!
+                </p>
+    
+                <form>
+                    <input type="text" placeholder="email address" name="email" required>
+                    <input type="submit" value="subscribe" name="subscribe">
+                </form>
+            </div>
+    
+            <div class="column right">
+                <h4>
+                    Navigate
+                </h4>
+    
+                <div id="navLinks">
+                    <span class="navigate">
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="menu.html">Menu</a></p>
+                        <p><a href="team.html">The Team</a></p>
+                        <p><a href="location.html">Location</a></p>
+                    </span>
+                    <span class="navigate">
+                        <p><a href="events.html">Events</a></p>
+                        <p><a href="contact.html">Contact Us</a></p>
+                        <p><a href="faq.html">FAQ</a></p>
+                    </span>
+                </div>
+    
+            </div>
+        </div>
+    </body>
+</html>

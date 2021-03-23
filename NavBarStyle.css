@@ -5,6 +5,7 @@ body {
 
 #navBar {
 	top: 0px;
+	left:0px;
 	display: flex;
 	position: fixed;
 	width: 100%;

@@ -2,25 +2,70 @@ body {
     padding: 0 5%;
     margin: 0;
     background-image: url("krabbypatt.jpg");
-    /* background-repeat: repeat; */
-	/* Size needs to be heavily updated */
     background-size: 2000px;
 }
 
 .show_menu {
 		border: #000 3px;
-		/* position: relative; */
+		background: url("option_for_food.jpg") no-repeat center center;
+		background-size: cover;
+		height: 30vh;
+		width: 100%;
 		text-align: center;
-		color: white;
 }
 
-.show_menu_prompt {
-		/* position: absolute; */
-		/* top: 50%;
-		left: 50%; */
-		transform: translate(-50%, -50%);
+
+.display_hover {
+	display: none;
 }
 
+
+.data {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.3% 0;
+    align-items: center;
+}
+
+input, textarea, .button {
+	resize: none;
+    margin: 8px 0;
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: #000 2px solid;
+    font-family: Garamond;
+}
+input {
+	height: 40px;
+}
+
+textarea {
+	height: 64px;
+}
+
+.button {
+	background-color: #fff;
+	width: 160px;
+	text-align: center;
+	font-size: 12px;
+	color:#000;
+	padding: 6px;
+	height: auto;
+}
+
+select {
+	width: auto;
+	height: 56px;
+	border-radius: ;
+}
+
+.display_hover:hover {
+	/* position: absolute; */
+	display: block;
+}
 .content {
     background-color: #FFF;
     /* height: 6000px; */
@@ -32,16 +77,7 @@ body {
     text-align: center;
     font-size: 28px;
 }
-p {
-    text-align: center;
-    margin: 5%;
-}
 
-
-/* body {
-	margin: 0px;
-}
- */
 #navBar {
 	top: 0px;
 	display: flex;
@@ -81,7 +117,6 @@ a {
 }
 
 a:hover {
-	/* color: rgb(247, 4, 4); */
     color: #faafc9;
 }
 

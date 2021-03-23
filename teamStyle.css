@@ -21,11 +21,11 @@ h3 {
 	text-align: center;
 }
 
-.left {
+.left_col {
 	width: 15%;
 }
 
-.right {
+.right_col {
 	width: 85%;
 	border-width: 2px;
 	border-style: solid;

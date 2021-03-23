@@ -86,7 +86,15 @@
         //     }
         // });
 
-
+        function calculateDate()
+        {
+            d = new Date()
+            day = Date.prototype.getUTCDate()
+            month = Date.prototype.getMonth() + 1
+            year = Date.prototype.getFullYear()
+            value = year + "-" + month + "-" + day
+            return value
+        }                       
         function validateEmail(email) 
         {
             const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -163,12 +171,12 @@
         
         window.onload =  function() 
         {
+            
+            displayAppropriateValue("donate")
             select_choices = document.getElementById("reason")
-            // displayDonate()
             select_choices.addEventListener("change", function ()
             {
                 displayAppropriateValue(select_choices.value)
-                // alert("Hey")
             })
             
             // alert(select_choices)
@@ -176,26 +184,32 @@
         }
         function displayAppropriateValue(choice)
         {
+            
             if(choice == "donate")
             {
                 document.getElementById("myFile").style.display = "none";
                 document.getElementById("card").style.display = "inline-block";
+                document.getElementById("ResDate").style.display = "none";
             }
             else if(choice == "employment")
             {
                 document.getElementById("card").style.display = "none";
                 document.getElementById("myFile").style.display = "inline-block";
+                document.getElementById("ResDate").style.display = "none";
+
             }
             else if(choice == "other")
             {
                 document.getElementById("myFile").style.display = "none";
                 document.getElementById("card").style.display = "none";
+                document.getElementById("ResDate").style.display = "none";
 
             }
             else if(choice == "reservation")
             {
                 document.getElementById("myFile").style.display = "none";
                 document.getElementById("card").style.display = "none";
+                document.getElementById("ResDate").style.display = "inline-block";
                 //display calendar or something that checks for appropriate date. 
             }
             // alert(choice)
@@ -209,8 +223,8 @@
     action="/action_page.php"
     name="data">
 <p>Reason for Contacting</p>
-<select name="reason" id="reason" style="justify-content: center;">
-    <option value="donate" id ="abc">Donation</option>
+<select name="reason" id="reason">
+    <option value="donate">Donation</option>
     <option value="employment">Employment</option>
     <option value="reservation">Make a Reservation</option>
     <option value="other">Other</option>
@@ -230,6 +244,11 @@
 <p id= "email">Email*: <input type="text"  name='email'/></p>
     <div id="errMail" class="errMsg" display= "none"> 
         Valid email is required</div>
+<p id="ResDate">Set the date for the Reservation*:
+    <input type="date" name="date"></p>
+    <div id="errDate" class="errMsg" display= "none"> 
+        Valid date is required</div>
+
         <script>
             var	finalTax = document.getElementById("abc");
             finalTax = "123445";

@@ -49,6 +49,9 @@
     </script>    
 
 <style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
 	@font-face {
   		font-family: 'KrustyFont';
   		src: URL('MenuFont.ttf') format('truetype');
@@ -128,6 +131,18 @@ h2 {
 	margin-left: 300px;
 	color:#000000;
 }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 42%;
+  cursor: pointer;
+}
 	</style>
 
 </head>
@@ -179,7 +194,7 @@ h2 {
 	<div class= "main" style ="margin-top: 50px;">
 		<div class= "inside">
 			<div style="text-align: center; font-size: 32px; 
-			font-style: italic; font-family: Garamond;">
+			font-style: italic; font-family: Chango;">
 			Signature Meals</div>
 			<div class="food">
 				<div class= "row">
@@ -230,7 +245,7 @@ h2 {
 				</div>
 			</div> 
 			<div style="text-align: center; font-size: 32px; 
-                font-style: italic; font-family: Garamond;">
+                font-style: italic; font-family: Chango;">
                 Individual Item</div>
                 <div class="food">
                     <div class= "row">
@@ -369,8 +384,7 @@ h2 {
     </p>
     <p>Total: $ <input type="text"  name='total' id="total" />
     </p>
-     
-    <input type = "button" value = "Submit Order" onclick = "finish();"/>
+    <input type="button" class="button" value="Submit Order" onclick="finish();"/>
      
     </form>
 

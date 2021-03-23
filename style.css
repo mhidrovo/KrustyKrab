@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+@font-face {
+	  font-family: 'KrustyFont';
+	  src: URL('MenuFont.ttf') format('truetype');
+}
+
 h1 {
 	text-align: center;
 	font-size: 4vw;
 	margin-bottom: 4%;
+	font-family: 'KrustyFont';
 }
 
 body {
@@ -102,5 +110,3 @@ a {
 a:hover {
     color: #faafc9;
 }
-
-

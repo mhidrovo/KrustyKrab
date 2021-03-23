@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="NavBarStyle.css">
 	<link rel="stylesheet" type="text/css" href="FooterStyle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" 
@@ -56,16 +56,8 @@
   		font-family: 'KrustyFont';
   		src: URL('MenuFont.ttf') format('truetype');
 	}
-	body {
 
-		margin: 0px;
-		background-image: url("krabbypatt.jpg");
-		background-repeat: repeat;
-		background-size: 800px;
-		font-family: "KrustyFont";
-
-	}
-
+	
 	.menuList {
 	  color: #000000;
 	  font-size: 20px;
@@ -92,57 +84,63 @@
     	margin: 5%;
 	}
 
-.main {
-    margin-top: 64px;
-    max-height: 100%;
-    max-width: 100%;
-}
+	.main {
+		margin-top: 0px;
+		max-height: 100%;
+		max-width: 100%;
+	}
 
-.main .inside {
-    margin: 10px;
-    vertical-align: middle;
-    max-height: 100%;
-    max-width: 100%;
-	background-color: rgb(216, 231, 150);
-}
+	.main .inside {
+		margin: 0px;
+		vertical-align: middle;
+		max-height: 100%;
+		max-width: 100%;
+		background-color: rgb(216, 231, 150);
+	}
 
-.food {
-    column-count: 2;
-}
+	.food {
+		column-count: 2;
+	}
 
-.inside .row  {
-    flex: 50%;
-    padding: 2%;
-    text-align: center;
-}
+	.inside .row  {
+		flex: 50%;
+		padding: 2%;
+		text-align: center;
+	}
 
-#name_of_food {
-    padding-top: 5%;
-    font-weight: bold;
-}
+	#name_of_food {
+		padding-top: 5%;
+		font-weight: bold;
+	}
 
-#food_descr {
-    color: rgb(66, 66, 66);
-}
-h2 {
-	text-align: center;
-	background-color: rgb(216, 231, 150);
-    margin-right: 300px;
-	margin-left: 300px;
-	color:#000000;
-}
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 42%;
-  cursor: pointer;
-}
+	#food_descr {
+		color: rgb(66, 66, 66);
+	}
+
+	h2 {
+		text-align: center;
+		background-color: rgb(216, 231, 150);
+		margin-right: 300px;
+		margin-left: 300px;
+		color:#000000;
+	}
+
+	.button {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 25%;
+		cursor: pointer;
+	}
+	select {
+		width: auto;
+		height: 30px;
+	}
 	</style>
 
 </head>
@@ -188,10 +186,10 @@ h2 {
 
 
 
-<h2 style ="margin-top: 100px;">Krusty Krab Menu</h2>
+<h1><br>Krusty Krab Menu</h1>
 
 
-	<div class= "main" style ="margin-top: 50px;">
+	<div class= "main">
 		<div class= "inside">
 			<div style="text-align: center; font-size: 32px; 
 			font-style: italic; font-family: Chango;">
@@ -324,8 +322,8 @@ h2 {
   
   <h2>Order Now!</h2>
 
-  <form>
-    <p>First Name: <input type="text"  name='fname' /></p>
+  <form style="text-align: center; display:inline-block; margin-left: 25%;">
+    <p>First Name: <input type="text"  name='fname' size="2" /></p>
     <p>Last Name*:  <input type="text"  name='lname' /></p>
     <div id="errlname" class="errMsg">Name is required</div>
     
@@ -368,7 +366,7 @@ h2 {
             s += makeSelect("quan" + i, 0, 10);
             s += "</td><td>" + menuItems[i].name + "</td>";
             s += "<td> $ " + menuItems[i].cost.toFixed(2) + "</td>";
-            s += "<td>$<input type='text' name='cost'/></td></tr>";
+            s += "<td><input type='text' name='cost'/></td></tr>";
           }
           document.writeln(s);
 

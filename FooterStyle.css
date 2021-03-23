@@ -20,6 +20,8 @@ input[type=text], input[type=submit] {
 	margin: 2% 0%;
 	border: 1px solid #000;
 	box-sizing: border-box;
+	resize: vertical;
+	overflow: auto;
 }
 
 .navigate {

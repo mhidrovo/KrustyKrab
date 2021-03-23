@@ -1,0 +1,58 @@
+h1 {
+	text-align: center;
+	font-size: 4vw;
+	margin-bottom: 4%;
+}
+
+h3 {
+	font-size: 1.8vw;
+	text-align: center;
+}
+
+.teamMember {
+	display: flex;
+	margin: 2%;
+	padding-bottom: 2%;
+}
+
+.boxElement {
+	float: left;
+	margin: 1%;
+	text-align: center;
+}
+
+.left_col {
+	width: 15%;
+}
+
+.right_col {
+	width: 85%;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 120px;
+	border-color: #c1ff82;
+	box-shadow: -3px 4px 10px #415439;
+	background-color: rgb(216, 231, 150);
+}
+
+#newRecruits {
+	display: flex;
+	margin: 2%;
+}
+
+.recruit {
+	flex: 1;
+	margin: 2%;
+	padding: 0% 1%;
+	text-align: center;
+}
+
+#recruitsContainer {
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 120px;
+	border-color: #c1ff82;
+	box-shadow: -3px 4px 10px #415439;
+	background-color: rgb(216, 231, 150);
+	margin: 2%;
+}

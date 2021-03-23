@@ -17,20 +17,21 @@
       }
 
       menuItems = new Array(
-        new MenuItem("Krabby Patty", 3.5),
-        new MenuItem("Double Krabby Patty", 4.25),
-        new MenuItem("Triple Krabby Patty", 5),
-        new MenuItem("Kelp Rings", 2.5),
+        new MenuItem("Krabby Patty", 4),
+        new MenuItem("Double Krabby Patty", 5),
+        new MenuItem("Triple Krabby Patty", 6),
+        new MenuItem("Kelp Rings", 2),
         new MenuItem("Coral Bits", 2),
-        new MenuItem("Salty Sea Dog", 3),
+        new MenuItem("Salty Sea Dog", 7),
         new MenuItem("Kelp Shake", 2),
-        new MenuItem("Sailor Surprise", 3),
-        new MenuItem("Seaweed Shake", 2.5),
+        new MenuItem("Sailor Surprise", 5),
+        new MenuItem("Fountain Drink", 2),
         new MenuItem("Krabby Patty Meal", 8),
         new MenuItem("Double Krabby Patty Meal", 9),
         new MenuItem("Triple Krabby Patty Meal", 10),
         new MenuItem("Pirate Gang's Surprise", 20),
-        new MenuItem("Super Salty Sea Dog", 15)
+        new MenuItem("Super Salty Sea Dog", 15),
+        new MenuItem("Krusty Krab Pizza", 20)
       );
 
       function makeSelect(name, minRange, maxRange)
@@ -48,46 +49,34 @@
 <style type="text/css">
 
 	body {
-		padding: 0 5%;
 		margin: 0;
 		background-image: url("krabbypatt.jpg");
 		background-repeat: repeat;
 		background-size: 800px;
 	}
 
-	.content {
-		background-color: #FFF;
-		height: 6000px;
-	}
-
-	.about_us {
-		font-style: italic;
-		font-family: 'Merriweather Sans', sans-serif;
-		text-align: center;
-		font-size: 28px;
-	}
-
-
 	/* Create three equal columns that floats next to each other */
 	.column {
 		float: left;
+		padding: 2%;
+	}
+
+	.left {
+		width: 25%;
+		background-color: #e0ecff;
+	}
+
+
+	.middle {
 		width: 50%;
-		text-align: center;
-		padding: 0px;
+		background-color: #c9deff;
 	}
 
-	/* Clear floats after the columns */
-	.row:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+	.right {
+		width: 25%;
+		background-color: #a6c8ff;
+	}	
 
-
-	a:hover {
-		/* color: rgb(247, 4, 4); */
-		color: #faafc9;
-	}
 
 	
 	.menuList {
@@ -117,7 +106,86 @@
     	margin: 5%;
 	}
 
+	h4 {
+	font-size: 1.3vw;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+h5 {
+	font-size: 1.1vw;
+	font-weight: normal;
+}
+
+.navigate {
+	flex: 1;
+	margin: 0% 5%;
+	vertical-align: top;
+}
+
+#navLinks {
+	text-align: center;
+	display: flex;
+}
+
+#footer {
+	margin-top: 5%;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	height: 24vw;
+}
+
+input[type=text], input[type=submit] {
+	width: 100%;
+	padding: 1%;
+	margin: 2% 0%;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+.main {
+    margin-top: 64px;
+    max-height: 100%;
+    max-width: 100%;
+    border: 4px solid #000000;
+}
+
+
+.main .inside {
+    margin: 10px;
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+    border: 3px solid #000;
+    background-color: #fafafa;
+}
+
+
+.food {
+    column-count: 2;
+}
+
+.inside .row  {
+    flex: 50%;
+    padding: 2%;
+    text-align: center;
+}
+
+
+#name_of_food {
+    padding-top: 5%;
+    font-weight: bold;
+}
+
+#food_descr {
+    font-style: italic;
+}
+
 	</style>
+
+<h1>Order below!</h1>
 
 </head>
 
@@ -126,52 +194,152 @@
 
 
 <body>
-<div class="row">
-    <div class="column">
+
+
+	<div class= "main">
+		<div class= "inside">
+			<div style="text-align: center; font-size: 32px; 
+			font-style: italic; font-family: Garamond;">
+			Signature Meals</div>
+			<div class="food">
+				<div class= "row">
+					<div id="name_of_food">
+						Krabby Patty Meal
+					</div>
+					<div id="food_descr">
+						The quintessential Krabby Patty meal. Comes with a side and beverage. 
+						Chef's recommendation! &nbsp $8
+					</div>
+					<div id="name_of_food">
+						Double Krabby Patty Meal
+					</div>
+					<div id="food_descr">
+						If you are moderatly hungry, the double Krabby Patty meal is it. Is a double-decker krabby patty
+						that comes with a side and beverage.  &nbsp $9
+					</div>
+					<div id="name_of_food">
+						Triple Krabby Patty Meal
+					</div>
+					<div id="food_descr">
+						Meant only for those who are severely starved hungry. Is a triple-decker krabby patty 
+						that comes with a side and beverage.  &nbsp $10
+					</div>
+				</div>
+				<div class= "row">
+					<div id="name_of_food">
+						Pirate Gang's Surprise
+					</div>
+					<div id="food_descr">
+						Born from sailors lost at sea, this beverage makes the sailor surprise 
+						look like chum bucket sludge. Highest quality ingredients including extra 
+						secret sauce and special neptune cream. Also served with a krabby patty and side. &nbsp $20    
+					</div>
+					<div id="name_of_food">
+						Super Salty Sea Dog
+					</div>
+					<div id="food_descr">
+						An XL salty sea dog with your choice of a side and drink. &nbsp $15
+					</div>
+					<div id="name_of_food">
+						Krusty Krab Pizza
+					</div>
+					<div id="food_descr">
+						An exquisite specialty, this pizza meal is one large cheese pizza 
+						with your choice of sides and beverage.  &nbsp $20   
+					</div>
+				</div>
+			</div> 
+			<div style="text-align: center; font-size: 32px; 
+                font-style: italic; font-family: Garamond;">
+                Individual Item</div>
+                <div class="food">
+                    <div class= "row">
+                        <div id="name_of_food">
+                            Krabby Patty
+                        </div>
+                        <div id="food_descr">
+							Krabby Patty with cheese, lettuce, pickles, onion, tomato, 
+							mustard, ketchup, and our secret ingredient &nbsp $4
+                        </div>
+                        <div id="name_of_food">
+                            Double Krabby Patty
+                        </div>
+                        <div id="food_descr">
+                            Double decker krabby patty. &nbsp $5
+                        </div>
+                        <div id="name_of_food">
+                            Triple Krabby Patty
+                        </div>
+                        <div id="food_descr">
+                            Triple decker krabby patty. &nbsp  $6
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="name_of_food">
+                            Salty Sea Dog
+                        </div>
+                        <div id="food_descr">
+                            A premium salty dog served in our signature bun. Comes with 
+							ketchup and mustard. &nbsp $7
+                        </div>
+                        <div id="name_of_food">
+                            Kelp Shake
+                        </div>
+                        <div id="food_descr">
+                            Signature Kelp shake made with fresh kelp. &nbsp $2
+                        </div> 
+                        <div id="name_of_food">
+                            Fountain drink
+                        </div>
+                        <div id="food_descr">
+                            Classic fountain drinks served without ice. &nbsp $2
+                        </div> 
+                        <div id="name_of_food">
+                                Sailors Surprise
+                        </div>
+                        <div id="food_descr">
+                            Recipe comes from sailors lost at sea from the kraken itself. 
+							Contains essence of kraken, sailing juice, and other secret ingredients. &nbsp $5
+                        </div>
+                        <div id="name_of_food">
+                            Coral Bits
+                        </div>
+                        <div id="food_descr">
+                            Signature fried coral bits made from fresh coral.  &nbsp $2
+                        </div>
+                        <div id="name_of_food">
+                            Kelp Rings
+                        </div>
+                        <div id="food_descr">
+                            Signature fried kelp made from fresh kelp.  &nbsp $2
+                        </div>
+                    </div>
+                 </div>
+</div>
+	</div>
+
+
+
+
+
+
+
+    <div class="column left">
       <h2 style="background-color: #689ad3">Menu</h2>
       <div class="menuList"><p id="print_menu"></p>
       </div>
     </div>
-    <div class="column" id="price">
+    <div class="column middle" id="price">
       <h2 style="background-color: #689ad3">Price</h2>
       <div class="menuList"><p id="print_prices"></p>
+	</div>
     </div>
-  </div>
-
-<script>
-
-  document.getElementById("print_menu").innerHTML = print_menu();
-
-    function print_menu()
-    {
-      var s = "";
-      for (i=0; i< menuItems.length; i++)
-      {
-        //s += "<tr><td>";
-        s += "" + menuItems[i].name + "<br><br>";
-      }
-      return s;
-  
-    }
+	<div class="column right" id="order">
+		<h2 style="background-color: #689ad3">Price</h2>
+		<div class="menuList"><p id="print_prices"></p>
 
 
-    document.getElementById("print_prices").innerHTML = print_prices();
-    function print_prices()
-    {
-      var s = "";
-      for (i=0; i< menuItems.length; i++)
-      {
-        //s += "<tr><td>";
-        s += "$" + menuItems[i].cost.toFixed(2) + "<br><br>";
-      }
-      return s;
-  
-    }
 
-
-    
-    
-</script>
   
   <h2>Order Now!</h2>
 
@@ -203,7 +371,40 @@
         <th>Total Cost</th>
       </tr>
 
-      <script>
+	  <script>
+
+	  
+		  function print_menu()
+		  {
+			var s = "";
+			for (i=0; i< menuItems.length; i++)
+			{
+			  s += "" + menuItems[i].name + "<br><br>";
+			}
+			return s;
+		
+		  }
+	  
+	  
+		  function print_prices()
+		  {
+			var s = "";
+			for (i=0; i< menuItems.length; i++)
+			{
+			  //s += "<tr><td>";
+			  s += "$" + menuItems[i].cost.toFixed(2) + "<br><br>";
+			}
+			return s;
+		
+		  }
+	  
+	  
+		document.getElementById("print_menu").innerHTML = print_menu();
+		document.getElementById("print_prices").innerHTML = print_prices();
+		  
+	  </script>
+
+    <script>
 		  
 
           var s = "";
@@ -217,22 +418,25 @@
           }
           document.writeln(s);
 
-      </script>
+    </script>
+	</table>
 
-      <p>Subtotal: 
+
+    <p>Subtotal: 
         $<input type="text"  name='subtotal' id="subtotal" />
-     </p>
-     <p>Bikini Bottom tax 10%:
+    </p>
+    <p>Bikini Bottom tax 10%:
        $ <input type="text"  name='tax' id="tax" />
-     </p>
-     <p>Total: $ <input type="text"  name='total' id="total" />
-     </p>
+    </p>
+    <p>Total: $ <input type="text"  name='total' id="total" />
+    </p>
      
-     <input type = "button" value = "Submit Order" onclick = "finish();"/>
+    <input type = "button" value = "Submit Order" onclick = "finish();"/>
      
-     </form>
+    </form>
 
-
+	</div>
+</div>
     <script language="javascript">
 
 
@@ -255,14 +459,15 @@
 	var	saltySeaDog = document.getElementsByName("quan5");
   	var kelpShake = document.getElementsByName("quan6");
 	var sailorSurprise= document.getElementsByName("quan7");
-	var seaWeedShake = document.getElementsByName("quan8");
+	var fountainBev = document.getElementsByName("quan8");
 	var krabbyPattyMeal = document.getElementsByName("quan9");
 
 	var doubleKrabbyPattyMeal = document.getElementsByName("quan10");
 	var tripleKrabbyPattyMeal = document.getElementsByName("quan11");  
 	var pirateGangSurprise = document.getElementsByName("quan12");  
 	var	superSaltySeaDog = document.getElementsByName("quan13");
-	var	quanItem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var krustyKrabPizza = document.getElementsByName("quan14");
+	var	quanItem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 	// the values for the quantity * item and the boxes that display the values
@@ -364,8 +569,8 @@
 			updateQuantity(7, sailorSurprise[0].selectedIndex);
 		});
 
-		seaWeedShake[0].addEventListener("change", function() {
-			updateQuantity(8, seaWeedShake[0].selectedIndex);
+		fountainBev[0].addEventListener("change", function() {
+			updateQuantity(8, fountainBev[0].selectedIndex);
 		});
 
 		krabbyPattyMeal[0].addEventListener("change", function() {
@@ -380,12 +585,15 @@
 			updateQuantity(11, tripleKrabbyPattyMeal[0].selectedIndex);
 		});
 
-    pirateGangSurprise[0].addEventListener("change", function() {
+    	pirateGangSurprise[0].addEventListener("change", function() {
 			updateQuantity(12, pirateGangSurprise[0].selectedIndex);
 		});
 
 		superSaltySeaDog[0].addEventListener("change", function() {
 			updateQuantity(13, superSaltySeaDog[0].selectedIndex);
+		});
+		krustyKrabPizza[0].addEventListener("change", function() {
+			updateQuantity(14, krustyKrabPizza[0].selectedIndex);
 		});
 
 
@@ -533,5 +741,82 @@
 
     </script>
 
+
+
+<div id="footer">
+	<div class="column left">
+		<h4>
+			Contact Us
+		</h4>
+
+		<div>
+			<span>
+				social media:
+			</span>
+			<span>
+				<a href="https://www.facebook.com/TheKrustyKrabOfficial" target="blank"><img src="facebook-logo-png-2320.png" height="26px"></a>
+			</span>
+			<span>
+				<a href="https://www.instagram.com/explore/tags/krustykrab/?hl=en" target="blank"><img src="instagram-logo-png-2428.png" height="26px"></a>
+			</span>
+			<span>
+				<a href="https://twitter.com/krustykrabUSA" target="blank"><img src="twitter-logo-png-5860.png" height="26px"></a>
+			</span>
+		</div>
+
+		<h5>
+			email: sponge.bob@krustykrab.com
+		</h5>
+
+		<h5>
+			address: 831 Bottom Feeder Lane, Bikini Bottom
+		</h5>
+
+		<h5>
+			Hours: Mon-Fri: 9am to 8pm, Sat-Sun: 10am to 11pm
+		</h5>
+	</div>
+
+	<div class="column middle">
+		<h4>
+			Sign up to our newsletter!
+		</h4>
+
+		<p style="text-align: center;">
+			we will update you on upcoming events, new menu items, and deals!
+		</p>
+
+		<form>
+			<input type="text" placeholder="email address" name="email" required>
+			<input type="submit" value="subscribe" name="subscribe">
+		</form>
+	</div>
+
+	<div class="column right">
+		<h4>
+			Navigate
+		</h4>
+
+		<div id="navLinks">
+			<span class="navigate">
+				<p><a href="index.html">Home</a></p>
+				<p><a href="menu.html">Menu</a></p>
+				<p><a href="team.html">The Team</a></p>
+				<p><a href="location.html">Location</a></p>
+			</span>
+			<span class="navigate">
+				<p><a href="events.html">Events</a></p>
+				<p><a href="contact.html">Contact Us</a></p>
+				<p><a href="faq.html">FAQ</a></p>
+			</span>
+		</div>
+
+	</div>
+</div>
+
+
 </body>
+
+
+
 </html>

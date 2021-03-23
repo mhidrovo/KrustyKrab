@@ -1,10 +1,11 @@
 #container {
-	background-color: #c9deff;
+	background-color: rgb(216, 231, 150);
 	border-style: solid;
 	border-width: 1px;
 	border-color: #000;
 	margin: 0% 5%;
 	padding: 4% 2%;
+	border-radius: 10%;
 }
 
 .question {

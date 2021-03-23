@@ -1,4 +1,9 @@
 
+@font-face {
+  	font-family: 'KrustyFont';
+  	src: URL('MenuFont.ttf') format('truetype');
+}
+
 body {
 	margin: 0px;
 }
@@ -48,17 +53,17 @@ input[type=text], input[type=submit] {
 
 .left {
 	width: 25%;
-	background-color: #e0ecff;
+	background-color: #e6ffb8;
 }
 
 .middle {
 	width: 50%;
-	background-color: #c9deff;
+	background-color: rgb(216, 231, 150);
 }
 
 .right {
 	width: 25%;
-	background-color: #a6c8ff;
+	background-color: #b0d18e;
 }
 
 .responsiveImage {

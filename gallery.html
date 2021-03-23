@@ -8,13 +8,6 @@
         <title>Krusty Krab</title>
         <style>
             /* * {box-sizing:border-box} */
-            h1 {
-                font-size: 36px;
-                text-align: center;
-                color: #fafafa;
-                background-color: rgb(216, 231, 150);
-                border-radius: 25px;
-            }
             .slideshow {
                 background-color: rgb(216, 231, 150);
                 border: 3px solid #000;
@@ -40,7 +33,7 @@
             .prev, .next {
             cursor: pointer;
             position: absolute;
-            top: 60%;
+            top: 50%;
             width: auto;
             margin-top: -22px;
             padding: 16px;
@@ -121,6 +114,9 @@
             from {opacity: .4}
             to {opacity: 1}
             }
+            #numbertext {
+                text-align: inline;
+            }
         </style>
     </head>
     <body>
@@ -165,31 +161,26 @@
         <h1>Photo Gallery</h1>
         <div class="slideshow" style = "text-align: center;">
             <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
                 <img src="img1.jpg" class = "slides" >
                 <div class="text"></div>
               </div>
             
               <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
                 <img src="img2.jpg" class = "slides">
                 <div class="text"></div>
               </div>
             
               <div class="mySlides fade">
-                <div class="numbertext">3 / 5</div>
                 <img src="img3.jpg" class = "slides">
                 <div class="text"></div>
               </div>
 
               <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
                 <img src="img4.jpg" class = "slides">
                 <div class="text"></div>
               </div>
 
               <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
                 <img src="img5.jpg" class = "slides">
                 <div class="text"></div>
               </div>

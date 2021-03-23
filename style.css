@@ -5,13 +5,19 @@ body {
     background-size: 2000px;
 }
 
-.show_menu {
+#show_men {
 		border: #000 3px;
 		background: url("option_for_food.jpg") no-repeat center center;
 		background-size: cover;
 		height: 30vh;
 		width: 100%;
 		text-align: center;
+}
+
+#explore_menu {
+	font-size: 50px;
+	position: relative;
+	color:#e8f0f7;
 }
 
 

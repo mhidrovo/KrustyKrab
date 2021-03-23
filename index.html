@@ -72,12 +72,26 @@
 
                 </p>
             </div>
+
+            <script>
+                function mouseOut() {
+                    document.getElementById("show_men").style = "show_menu";
+                    document.getElementById("show_men").innerHTML="";
+                }
+                function mouseOver() {
+                    document.getElementById("show_men").innerHTML="<span id=explore_menu><br>Explore Our Menu!</span>";
+
+                }
+            </script>
+
             <div class="all_together_menu">
-                <div class="show_menu">
-                    <div class="Title" style="padding-top: 10%;">
-                        <h2>Explore our Menu</h2>
-                    </div>            
-                </div>
+               <!-- <div class="show_menu"> -->
+                    <div class="Title">
+                        <a href=menu.html>
+                            <div id="show_men" onmouseover="mouseOver()" onmouseout="mouseOut()"></div>
+                        </a>
+                    </div> 
+                <!-- </div> -->
                 <div class = "display_hover" style="color:#000">
                     <h2>Hello!!!!!</h2>
                 </div>

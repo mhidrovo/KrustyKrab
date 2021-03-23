@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Menu</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="NavBarStyle.css">
 	<link rel="stylesheet" type="text/css" href="FooterStyle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" 
@@ -49,38 +49,20 @@
     </script>    
 
 <style type="text/css">
-
+	@font-face {
+  		font-family: 'KrustyFont';
+  		src: URL('MenuFont.ttf') format('truetype');
+	}
 	body {
-		margin: 0;
+
+		margin: 0px;
 		background-image: url("krabbypatt.jpg");
 		background-repeat: repeat;
 		background-size: 800px;
+		font-family: "KrustyFont";
+
 	}
 
-	/* Create three equal columns that floats next to each other */
-	.column {
-		float: left;
-		padding: 2%;
-	}
-
-	.left {
-		width: 25%;
-		background-color: #e0ecff;
-	}
-
-
-	.middle {
-		width: 50%;
-		background-color: #c9deff;
-	}
-
-	.right {
-		width: 25%;
-		background-color: #a6c8ff;
-	}	
-
-
-	
 	.menuList {
 	  color: #000000;
 	  font-size: 20px;
@@ -89,8 +71,8 @@
 	}
 	
 	form {
-	  background-color: #dafa9e;
-	  border: 3px solid #727272;
+	  background-color: rgb(216, 231, 150);
+	  margin : 20px;
 	}
 
 	h2 .headers {
@@ -101,69 +83,25 @@
 	  color: #D20E11; border: solid 1px #d20e11; display:none;  padding: 1px 15px;
 	}
 
-
 	p {
 		padding: 0.5% 0%;
 		text-align: left;
     	margin: 5%;
 	}
 
-	h4 {
-	font-size: 1.3vw;
-	text-align: center;
-	margin-bottom: 10%;
-}
-
-h5 {
-	font-size: 1.1vw;
-	font-weight: normal;
-}
-
-.navigate {
-	flex: 1;
-	margin: 0% 5%;
-	vertical-align: top;
-}
-
-#navLinks {
-	text-align: center;
-	display: flex;
-}
-
-#footer {
-	margin-top: 5%;
-	position: relative;
-	bottom: 0;
-	width: 100%;
-	display: flex;
-	height: 24vw;
-}
-
-input[type=text], input[type=submit] {
-	width: 100%;
-	padding: 1%;
-	margin: 2% 0%;
-	border: 1px solid #000;
-	box-sizing: border-box;
-}
-
 .main {
     margin-top: 64px;
     max-height: 100%;
     max-width: 100%;
-    border: 4px solid #000000;
 }
-
 
 .main .inside {
     margin: 10px;
     vertical-align: middle;
     max-height: 100%;
     max-width: 100%;
-    border: 3px solid #000;
-    background-color: #fafafa;
+	background-color: rgb(216, 231, 150);
 }
-
 
 .food {
     column-count: 2;
@@ -175,20 +113,26 @@ input[type=text], input[type=submit] {
     text-align: center;
 }
 
-
 #name_of_food {
     padding-top: 5%;
     font-weight: bold;
 }
 
 #food_descr {
-    font-style: italic;
+    color: rgb(66, 66, 66);
 }
-
+h2 {
+	text-align: center;
+	background-color: rgb(216, 231, 150);
+    margin-right: 300px;
+	margin-left: 300px;
+	color:#000000;
+}
 	</style>
 
 </head>
 
+<body>
 <div id="navBar">
 	<!-- logo -->
 	<span id="logo">
@@ -229,11 +173,10 @@ input[type=text], input[type=submit] {
 
 
 
+<h2 style ="margin-top: 100px;">Krusty Krab Menu</h2>
 
-<body>
 
-
-	<div class= "main">
+	<div class= "main" style ="margin-top: 50px;">
 		<div class= "inside">
 			<div style="text-align: center; font-size: 32px; 
 			font-style: italic; font-family: Garamond;">
@@ -397,33 +340,6 @@ input[type=text], input[type=submit] {
 	  <script>
 
 	  
-		  function print_menu()
-		  {
-			var s = "";
-			for (i=0; i< menuItems.length; i++)
-			{
-			  s += "" + menuItems[i].name + "<br><br>";
-			}
-			return s;
-		
-		  }
-	  
-	  
-		  function print_prices()
-		  {
-			var s = "";
-			for (i=0; i< menuItems.length; i++)
-			{
-			  //s += "<tr><td>";
-			  s += "$" + menuItems[i].cost.toFixed(2) + "<br><br>";
-			}
-			return s;
-		
-		  }
-	  
-	  
-		document.getElementById("print_menu").innerHTML = print_menu();
-		document.getElementById("print_prices").innerHTML = print_prices();
 		  
 	  </script>
 
@@ -749,7 +665,7 @@ input[type=text], input[type=submit] {
 	// composes the statement printed when displaying order
 	function statement() {
 		getTime();
-		var orderStatement = "Thank you for ordering from Jade Delight! Your food will be ready at: " + hour + ":" + min + ".<br><br>Your order is: <br>";
+		var orderStatement = "Thank you for ordering from The Krusty Krab! Your food will be ready at: " + hour + ":" + min + ".<br><br>Your order is: <br>";
 		for (let i = 0; i < quanItem.length; i++) {
 			if (quanItem[i] != 0) {
 				orderStatement += menuItems[i].name + ": " + quanItem[i] + "<br><br>";

@@ -24,9 +24,9 @@ h3 {
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 120px;
-	border-color: #78aeff;
-	box-shadow: -3px 4px 10px #aaa;
-	background-color: #e6f0ff;
+	border-color: #c1ff82;
+	box-shadow: -3px 4px 10px #415439;
+	background-color: rgb(216, 231, 150);
 }
 
 #newRecruits {
@@ -45,8 +45,8 @@ h3 {
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 120px;
-	border-color: #78aeff;
-	box-shadow: -3px 4px 10px #aaa;
-	background-color: #e6f0ff;
+	border-color: #c1ff82;
+	box-shadow: -3px 4px 10px #415439;
+	background-color: rgb(216, 231, 150);
 	margin: 2%;
 }

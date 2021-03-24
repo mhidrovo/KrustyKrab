@@ -4,15 +4,12 @@
   	src: URL('MenuFont.ttf') format('truetype');
 }
 
-body {
-	margin: 0px;
-}
-
 #navBar {
+	padding: 0px;
 	top: 0px;
 	display: flex;
 	position: fixed;
-	width: 100%;
+	width: 90%;
 	height: 12%;
 	box-shadow: 0px 2px 10px gray;
 	background-color: rgb(216, 231, 150);
@@ -20,7 +17,7 @@ body {
 
 #logo {
 	flex: 7%;
-	width: 17%;
+	width: 7%;
 	vertical-align: middle;
 	padding: 0.5% 2.2%;
 }
@@ -30,7 +27,7 @@ body {
 	justify-content: center;
 	display: flex;
 	width: 93%;
-	height: 10%
+	height: 10%;
 	vertical-align: middle;
 }
 

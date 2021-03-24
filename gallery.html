@@ -10,19 +10,22 @@
             /* * {box-sizing:border-box} */
             .slideshow {
                 background-color: rgb(216, 231, 150);
+                background-size: contain;
                 border: 3px solid #000;
                 border-radius: 25px;
             }
             /* Slideshow container */
-            .slideshow-container {
+            /* .slideshow-container {
                 max-width: 75%;
                 max-height: 50%;
                 position: relative;
                 margin: auto;
-            }
+            } */
             .slides {
-                width: 60%;
+                width: 1280px;
+                height: 720px;
                 border-radius: 25px;
+                object-fit: fill;
             }
             /* Hide the images by default */
             .mySlides {
@@ -162,12 +165,14 @@
         <div class="slideshow" style = "text-align: center;">
             <div class="mySlides fade">
                 <img src="img1.jpg" class = "slides" >
-                <div class="text"></div>
+                <br>
+                20th Anniversary Celebration!
               </div>
             
               <div class="mySlides fade">
                 <img src="img2.jpg" class = "slides">
-                <div class="text"></div>
+                <br>
+                Krabby Patty
               </div>
             
               <div class="mySlides fade">

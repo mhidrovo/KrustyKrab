@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel = "stylesheet" type="text/css" href = "FooterStyle.css">
         <link rel = "stylesheet" type = "text/css" href = "NavBarStyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <!-- Insert Tristan's nav bar -->
         <title>Krusty Krab</title>
         <style>
@@ -22,27 +23,28 @@
                 margin: auto;
             } */
             .slides {
-                width: 1280px;
-                height: 720px;
-                border-radius: 25px;
+                padding-top: 30px;
+                width: 60vw;
+                height: 30vw;
                 object-fit: fill;
             }
             /* Hide the images by default */
             .mySlides {
                 display: none;
+                font-size: 3vw;
             }
 
             /* Next & previous buttons */
             .prev, .next {
             cursor: pointer;
-            position: absolute;
-            top: 50%;
+            position: sticky;
+            top: 70%;
             width: auto;
             margin-top: -22px;
-            padding: 16px;
+            padding: 12px;
             color: rgb(253, 249, 0);
             font-weight: bold;
-            font-size: 18px;
+            font-size: 3.5vw;
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
@@ -52,11 +54,13 @@
             .next {
             right: 0;
             border-radius: 3px 0 0 3px;
+            margin-right: 5vw;
             }
 
             .prev {
                 left: 0;
                 border-radius: 3px 0 0 3px;
+                margin-left: 5vw;
             }
 
             /* On hover, add a black background color with a little bit see-through */
@@ -172,22 +176,28 @@
               <div class="mySlides fade">
                 <img src="img2.jpg" class = "slides">
                 <br>
-                Krabby Patty
+                Krabby Patty!
               </div>
             
               <div class="mySlides fade">
                 <img src="img3.jpg" class = "slides">
                 <div class="text"></div>
+                <br>
+                Your Reaction to our Krabby Patty!
               </div>
 
               <div class="mySlides fade">
                 <img src="img4.jpg" class = "slides">
                 <div class="text"></div>
+                <br>
+                Our Lovely Chefs!
               </div>
 
               <div class="mySlides fade">
                 <img src="img5.jpg" class = "slides">
                 <div class="text"></div>
+                <br>
+                Our Lovely Chefs Again!
               </div>
 
               <!-- Next and previous buttons -->
@@ -199,6 +209,13 @@
             showSlides(slideIndex);
 
             // Next/previous controls
+
+3
+4
+            // A $( document ).ready() block.
+            $( document ).ready(function() {
+                $(".mySlides").fadeIn(2000);
+            });
             function plusSlides(n) {
                 showSlides(slideIndex += n);
             }
@@ -250,7 +267,7 @@
                 </div>
     
                 <h5>
-                    email: sponge.bob@krustykrab.com
+                    email: <a href="mailto: sponge.bob@krustykrab.com">sponge.bob@krustykrab.com</a>
                 </h5>
     
                 <h5>

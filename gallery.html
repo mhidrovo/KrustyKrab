@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel = "stylesheet" type="text/css" href = "FooterStyle.css">
         <link rel = "stylesheet" type = "text/css" href = "NavBarStyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <!-- Insert Tristan's nav bar -->
         <title>Krusty Krab</title>
         <style>
@@ -36,7 +37,7 @@
             .prev, .next {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 70%;
             width: auto;
             margin-top: -22px;
             padding: 16px;
@@ -199,6 +200,13 @@
             showSlides(slideIndex);
 
             // Next/previous controls
+
+3
+4
+            // A $( document ).ready() block.
+            $( document ).ready(function() {
+                $(".mySlides").fadeIn(2000);
+            });
             function plusSlides(n) {
                 showSlides(slideIndex += n);
             }

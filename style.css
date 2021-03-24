@@ -5,6 +5,12 @@
 	  src: URL('MenuFont.ttf') format('truetype');
 }
 
+.hope {
+	background-color: rgb(216, 231, 150);
+	border-radius: 25px;
+	color: #000;
+}
+
 h1 {
 	text-align: center;
 	font-size: 4vw;
@@ -97,7 +103,9 @@ select {
 	display: block;
 }
 .content {
-    background-color: rgb(216, 231, 150);;
+    background-color: rgb(216, 231, 150);
+	border-radius: 25px;
+
     /* height: 6000px; */
 }
 

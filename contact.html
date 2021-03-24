@@ -17,8 +17,9 @@
                 padding: 1px 15px;
                 }
                 form p {
-                    margin: 0 40%;
-                    color: #fff;
+                    padding-top: 1%;
+                    margin: 0 30%;
+                    color: #000;
                 }
             /* textarea {
 
@@ -194,57 +195,57 @@
     </script>
 <h1>Contact Us</h1>
 <!-- <p>Click on the "Choose File" button to upload a file:</p> -->
+<div class="hope">
+    <form 
+        action="/action_page.php"
+        name="data"
+        class="data">
+    <p>Reason for Contacting</p>
+    <select name="reason" id="reason">
+        <option value="donate">Donation</option>
+        <option value="employment">Employment</option>
+        <option value="reservation">Make a Reservation</option>
+        <option value="other">Other</option>
+    </select>
+    <p>First Name*: <input type="text"  name='fname' /></p>
+    <div id="errFName" class="errMsg" display = "none"> 
+        First Name is required</div> 
+    <p>Last Name*:  <input type="text"  name='lname' /></p>
+        <div id="errLName" class="errMsg" display = "none"> 
+            Last Name is required</div> 
+    <p id= "phone">Phone*: <input type="text"  name='phone'/></p>
+        <div id="errPhone" class="errMsg" display= "none"> 
+            Valid phone number is required</div>
+    <p id= "card">American Express Credit Card: <input type="text"  name='card'/></p>
+    <div id="errCard" class="errMsg" display= "none"> 
+        Valid credit card is required</div>
+    <p id= "email">Email*: <input type="text"  name='email'/></p>
+        <div id="errMail" class="errMsg" display= "none"> 
+            Valid email is required</div>
+    <p id="ResDate">Set the date for the Reservation*:
+        <input type="date" name="date"></p>
+        <div id="errDate" class="errMsg" display= "none"> 
+            Valid date is required</div>
 
-<form 
-    action="/action_page.php"
-    name="data"
-    class="data">
-<p>Reason for Contacting</p>
-<select name="reason" id="reason">
-    <option value="donate">Donation</option>
-    <option value="employment">Employment</option>
-    <option value="reservation">Make a Reservation</option>
-    <option value="other">Other</option>
-</select>
-<p>First Name*: <input type="text"  name='fname' /></p>
-<div id="errFName" class="errMsg" display = "none"> 
-    First Name is required</div> 
-<p>Last Name*:  <input type="text"  name='lname' /></p>
-	<div id="errLName" class="errMsg" display = "none"> 
-        Last Name is required</div> 
-<p id= "phone">Phone*: <input type="text"  name='phone'/></p>
-    <div id="errPhone" class="errMsg" display= "none"> 
-        Valid phone number is required</div>
-<p id= "card">American Express Credit Card: <input type="text"  name='card'/></p>
-<div id="errCard" class="errMsg" display= "none"> 
-    Valid credit card is required</div>
-<p id= "email">Email*: <input type="text"  name='email'/></p>
-    <div id="errMail" class="errMsg" display= "none"> 
-        Valid email is required</div>
-<p id="ResDate">Set the date for the Reservation*:
-    <input type="date" name="date"></p>
-    <div id="errDate" class="errMsg" display= "none"> 
-        Valid date is required</div>
-
-        <!-- <script>
-            var	finalTax = document.getElementById("abc");
-            finalTax = "123445";
-        </script> -->
-    
-<p>
-<textarea placeholder="Feel free to write us a message here"></textarea>
-</p>
-    <!-- <label for="Upload">UPLOAD</label>
-    <label for="myFile">UPLOAD</label> -->
-    <p id= "file">Resume*: <br><input type="file" id="myFile" label="" value="Upload" class="button">
-    <div id="errResume" class="errMsg" display= "none"> 
-        Valid file is required</div>            
-  <br>
-  <!-- <label for="myFile">Upload resume</label> -->
-  <input type = "button" value = "Submit" onclick="return validate()"/>
-<!-- </p> -->
-</form>
-
+            <!-- <script>
+                var	finalTax = document.getElementById("abc");
+                finalTax = "123445";
+            </script> -->
+        
+    <p>
+    <textarea placeholder="Feel free to write us a message here"></textarea>
+    </p>
+        <!-- <label for="Upload">UPLOAD</label>
+        <label for="myFile">UPLOAD</label> -->
+        <p id= "file">Resume*: <br><input type="file" id="myFile" label="" value="Upload" class="button">
+        <div id="errResume" class="errMsg" display= "none"> 
+            Valid file is required</div>            
+    <br>
+    <!-- <label for="myFile">Upload resume</label> -->
+    <input type = "button" value = "Submit" onclick="return validate()"/>
+    <!-- </p> -->
+    </form>
+</div>
 
 
 

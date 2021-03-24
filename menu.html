@@ -12,6 +12,7 @@
     </script>
     <script>
     
+	//Here is the array and object declarations for the menu/ordering
       function MenuItem(name, cost)
       {
         this.name = name;
@@ -186,9 +187,10 @@
 
 
 
-<h1><br>Krusty Krab Menu</h1>
+<h1>Krusty Krab Menu</h1>
 
 
+	<!--Here is the main portion of the menu-->
 	<div class= "main">
 		<div class= "inside">
 			<div style="text-align: center; font-size: 32px; 
@@ -308,8 +310,8 @@
                         </div>
                     </div>
                  </div>
-</div>
-	</div>
+			</div>
+		</div>
 
 
 
@@ -319,7 +321,7 @@
 
 
 
-  
+  <!--Here is the form/order area-->
   <h2>Order Now!</h2>
 
   <form style="text-align: center; display:inline-block; margin-left: 25%;">
@@ -333,7 +335,7 @@
     <p id="city">City: <input type="text"  name='city' /></p>
     <div id="errcity" class="errMsg">City is required</div>
     
-    <p>Phone*: <input type="text"  name='phone' /></p>
+    <p>Phone Number*: <input type="text"  name='phone' /></p>
     <div id="errphone" class="errMsg">Phone is required</div>
     
     <p> 
@@ -350,15 +352,7 @@
         <th>Total Cost</th>
       </tr>
 
-	  <script>
-
-	  
-		  
-	  </script>
-
     <script>
-		  
-
           var s = "";
           for (i=0; i< menuItems.length; i++)
           {
@@ -369,10 +363,9 @@
             s += "<td><input type='text' name='cost'/></td></tr>";
           }
           document.writeln(s);
-
     </script>
-	</table>
 
+	</table>
 
     <p>Subtotal: 
         $<input type="text"  name='subtotal' id="subtotal" />
@@ -683,7 +676,7 @@
 				orderStatement += menuItems[i].name + ": " + quanItem[i] + "<br><br>";
 			}
 		}
-		orderStatement += "Here is the billing: <br>"
+		orderStatement += "Payment is expected upon both pickup and delivery. Here is the billing: <br>"
 		orderStatement += "Subtotal: $" + subtotal.toFixed(2) + "</br>Tax: $" + tax.toFixed(2) + "<br>Total: $" + total.toFixed(2) + "<br><br>Enjoy!";
 		return orderStatement;
 	}
@@ -764,9 +757,6 @@
 	</div>
 </div>
 
-
 </body>
-
-
 
 </html>

@@ -2,6 +2,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- For our keywords, TA Victor told us we could include the same keywords on all our pages. -->
+    <meta name="keywords" content="Spongebob, spongebob, Sponge Bob, Krusty Krab, Bikini Bottom, Krabby Patty, krabby patty, restaurant, burger, fast food, Mr. Krabs, Mr Krabs, cartoon restaurant">
+        
     <title>Menu</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="NavBarStyle.css">
@@ -12,7 +16,6 @@
     </script>
     <script>
     
-	//Here is the array and object declarations for the menu/ordering
       function MenuItem(name, cost)
       {
         this.name = name;
@@ -187,10 +190,9 @@
 
 
 
-<h1>Krusty Krab Menu</h1>
+<h1><br>Krusty Krab Menu</h1>
 
 
-	<!--Here is the main portion of the menu-->
 	<div class= "main">
 		<div class= "inside">
 			<div style="text-align: center; font-size: 32px; 
@@ -310,8 +312,8 @@
                         </div>
                     </div>
                  </div>
-			</div>
-		</div>
+</div>
+	</div>
 
 
 
@@ -321,10 +323,10 @@
 
 
 
-  <!--Here is the form/order area-->
+  
   <h2>Order Now!</h2>
-<div style="text-align: center;">
-  <form style="display:inline-block;">
+
+  <form style="text-align: center; display:inline-block; margin-left: 25%;">
     <p>First Name: <input type="text"  name='fname' size="2" /></p>
     <p>Last Name*:  <input type="text"  name='lname' /></p>
     <div id="errlname" class="errMsg">Name is required</div>
@@ -335,7 +337,7 @@
     <p id="city">City: <input type="text"  name='city' /></p>
     <div id="errcity" class="errMsg">City is required</div>
     
-    <p>Phone Number*: <input type="text"  name='phone' /></p>
+    <p>Phone*: <input type="text"  name='phone' /></p>
     <div id="errphone" class="errMsg">Phone is required</div>
     
     <p> 
@@ -352,7 +354,15 @@
         <th>Total Cost</th>
       </tr>
 
+	  <script>
+
+	  
+		  
+	  </script>
+
     <script>
+		  
+
           var s = "";
           for (i=0; i< menuItems.length; i++)
           {
@@ -363,9 +373,10 @@
             s += "<td><input type='text' name='cost'/></td></tr>";
           }
           document.writeln(s);
-    </script>
 
+    </script>
 	</table>
+
 
     <p>Subtotal: 
         $<input type="text"  name='subtotal' id="subtotal" />
@@ -380,7 +391,6 @@
     </form>
 
 	</div>
-</div>
     <script language="javascript">
 
 
@@ -677,7 +687,7 @@
 				orderStatement += menuItems[i].name + ": " + quanItem[i] + "<br><br>";
 			}
 		}
-		orderStatement += "Payment is expected upon both pickup and delivery. Here is the billing: <br>"
+		orderStatement += "Here is the billing: <br>"
 		orderStatement += "Subtotal: $" + subtotal.toFixed(2) + "</br>Tax: $" + tax.toFixed(2) + "<br>Total: $" + total.toFixed(2) + "<br><br>Enjoy!";
 		return orderStatement;
 	}
@@ -758,6 +768,9 @@
 	</div>
 </div>
 
+
 </body>
+
+
 
 </html>

@@ -100,6 +100,7 @@
 		max-height: 100%;
 		max-width: 100%;
 		background-color: rgb(216, 231, 150);
+		border-radius: 25px;
 	}
 
 	.food {
@@ -195,9 +196,9 @@
 
 	<div class= "main">
 		<div class= "inside">
-			<div style="text-align: center; font-size: 32px; 
-			font-style: italic; font-family: Chango;">
-			Signature Meals</div>
+			<h2 style="text-align: center; font-size: 24px; 
+			font-style: italic;">
+			Signature Meals</h2>
 			<div class="food">
 				<div class= "row">
 					<div id="name_of_food">
@@ -246,9 +247,9 @@
 					</div>
 				</div>
 			</div> 
-			<div style="text-align: center; font-size: 32px; 
-                font-style: italic; font-family: Chango;">
-                Individual Item</div>
+			<h2 style="text-align: center; font-size: 24px; 
+                font-style: italic;">
+                Individual Items</h2>
                 <div class="food">
                     <div class= "row">
                         <div id="name_of_food">
@@ -316,17 +317,11 @@
 	</div>
 
 
-
-
-
-
-
-
-
   
-  <h2>Order Now!</h2>
+  <h2 style="border-radius: 25px;">Order Now!</h2>
 
-  <form style="text-align: center; display:inline-block; margin-left: 25%;">
+  <div style="text-align: center;">
+  <form style="display:inline-block; border-radius: 25px;">
     <p>First Name: <input type="text"  name='fname' size="2" /></p>
     <p>Last Name*:  <input type="text"  name='lname' /></p>
     <div id="errlname" class="errMsg">Name is required</div>
@@ -391,6 +386,7 @@
     </form>
 
 	</div>
+</div>
     <script language="javascript">
 
 

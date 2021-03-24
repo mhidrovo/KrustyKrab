@@ -37,14 +37,14 @@
             /* Next & previous buttons */
             .prev, .next {
             cursor: pointer;
-            position: absolute;
+            position: sticky;
             top: 70%;
             width: auto;
             margin-top: -22px;
-            padding: 16px;
+            padding: 12px;
             color: rgb(253, 249, 0);
             font-weight: bold;
-            font-size: 18px;
+            font-size: 3.5vw;
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
@@ -54,11 +54,13 @@
             .next {
             right: 0;
             border-radius: 3px 0 0 3px;
+            margin-right: 5vw;
             }
 
             .prev {
                 left: 0;
                 border-radius: 3px 0 0 3px;
+                margin-left: 5vw;
             }
 
             /* On hover, add a black background color with a little bit see-through */
